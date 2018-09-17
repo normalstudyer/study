@@ -1,0 +1,400 @@
+/*.searchBox .searchFrame .search-combox{*/
+    /*height: 36px;*/
+    /*border: 3px solid #de0304;*/
+    /*overflow: hidden;*/
+    /*float: left;*/
+    /*position: relative;*/
+/*}*/
+/*公用的样式*/
+a {
+    color: #464646;
+    text-decoration: none;
+    outline: none;
+}
+/*公用的样式*/
+.searchWarp{
+    position: relative;
+    margin-top:30px;
+    margin-left: 400px;
+    float: left;
+}
+.searchFrame{
+    height: 36px;
+    border: 3px solid #de0304;
+    overflow: hidden;
+    float: left;
+    position: relative;
+	margin-top:30px;
+	margin-left:50px;
+}
+.search-combox{
+    width: 360px;
+    padding: 0 105px 0 5px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.search-combox .ac_input{
+    width: 100%;
+    padding: 9px 0;
+    line-height: 18px;
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+}
+.search-btn{
+    display: inline;
+    /*float: right;*/
+    width: 100px;
+    height: 36px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.search-btn input{
+    width: 100px;
+    height: 36px;
+    background-color: #de0304;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 8px;
+    text-indent: 8px;
+}
+/*.search-combox #search-combox-bt{*/
+    /*height:39px;*/
+    /*border: 3px solid #de0304;*/
+    /*width:70px;*/
+    /*border-left:0px;*/
+    /*background-color: red;*/
+
+/*}*/
+.logo{
+	margin-left: -300px;
+	
+    padding: 0;
+    list-style-type: none;
+    border: 0;
+    font-size: 100%;
+	float:left;
+}
+.nav_bd {
+    margin-top: 28px;
+    clear: both;
+    
+    background-color: #d80000;
+}
+.navBar {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 6;
+}
+.navBar .ylType {
+    width: 210px;
+    height: 39px;
+    line-height: 39px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.navBar .ylType .allType {
+    position: relative;
+    background-color: #c90000;
+    width: 210px;
+}
+.navBar .ylType .allType h2 {
+    font-size: 15px;
+    font-weight: bold;
+}
+.navBar .ylType .allType a {
+    display: block;
+    color: #fff;
+    padding-left: 20px;
+	font-size: 15px;
+    font-weight: bold;
+}
+.navBar .nav_c {
+    height: 39px;
+    line-height: 39px;
+    position: relative;
+    left: 210px;
+    width: 990px;
+    clear: both;
+    top: 0;
+}
+.navBar .nav_c_1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+	list-style:none;
+	float:left;
+}
+.navBar .nav_c .nav_c_1 li.on {
+    background-color: #c70b0b;
+}
+.navBar .nav_c .nav_c_1 li {
+    float: left;
+}
+.navBar .nav_c .nav_c_1 li a {
+    width: 80px;
+    text-align: center;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+/*左边书籍目录*/
+.wrapSlide {
+    width: 1200px;
+    clear: both;
+    margin: 0 auto;
+}
+.index-sort {
+    border: 1px solid #dcdcdc;
+    border-top: 0;
+    background-color: #fff;
+    float: left;
+    width: 208px;
+    margin-top: -0px;
+    position: relative;
+    z-index: 100;
+}
+.index-sort .sort-menu-bd {
+    height: 547px;
+}
+.cat-menu li {
+    border-bottom: 1px dotted #dcdcdc;
+    padding: 0 10px 0 26px;
+    position: relative;
+}
+.cat-menu li h2 .title {
+    display: block;
+    float: left;
+}
+.cat-menu li h2 {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 8px;
+}
+.caret1 {
+    display: block;
+    height: 10px;
+    width: 6px;
+    position: relative;
+    float: right;
+    margin-top: 10px;
+}
+.caret_out {
+    border-style: dashed dashed dashed solid;
+    left: 0;
+    top: -1px;
+    border-width: 5px 5px 5px 6px;
+    border-color: transparent transparent transparent #6e6e6e;
+}
+.caret_in {
+    border-style: dashed dashed dashed solid;
+    left: -1px;
+    top: 0;
+    border-width: 4px 4px 4px 5px;
+    border-color: transparent transparent transparent #fff;
+}
+.caret_out, .caret_in {
+    overflow: visible;
+    width: 0;
+    height: 0;
+   
+    font-size: 0;
+    display: block;
+    position: absolute;
+}
+.cat-menu li .min-sort {
+    line-height: 20px;
+    line-height: 18px\9;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+.cat-menu li .min-sort a {
+    color: #696969;
+    display: block;
+    margin: 0 3px;
+    height: 20px;
+    float: left;
+}
+.submenu {
+    width: 728px;
+    background-color: #fff;
+    position: absolute;
+    left: 206px;
+    
+    display: none;
+    zoom: 1;
+    z-index: 100;
+    padding: 10px;
+    border: 2px solid #cd0001;
+}
+.submenu li {
+    border-bottom: 1px dotted #eaeaea;
+    clear: both;
+    display: block;
+    line-height: 26px;
+    overflow: hidden;
+    padding: 5px 0;
+    
+    margin: 0;
+}
+.submenu li h3 {
+    width: 89px;
+    font-size: 12px;
+    display: inline-block;
+    float: left;
+}
+.submenu li h3 a {
+    color: #464646;
+    text-decoration: none;
+}
+.submenu li .e {
+    width: 635px;
+    float: left;
+}
+.submenu li .e a {
+    padding: 0 8px 0 2px;
+    display: inline-block;
+    _background: url(../images/line_1.gif) no-repeat right 8px;
+    text-decoration: none;
+    color: #696969;
+}
+.mainCate:hover {
+	display:block;
+	background-color:#c90000;
+	color:white;
+}
+/* 中间的样式 */
+.wrapSlide .wrapContent {
+    margin-left: 220px;
+    overflow: hidden;
+}
+.wrapSlide .wrapContentL {
+    float: left;
+    overflow: hidden;
+}
+.wrapSlide .wrapContentL .ylSlide {
+    width: 750px;
+    height: 340px;
+}
+.slide {
+    float: left;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    width: 750px;
+    height: 340px;
+    z-index: 99;
+    _zoom: 1;
+}
+.slide .hd {
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+    z-index: 1;
+}
+.slide .hd li.on {
+    background: #cd0001;
+    color: #fff;
+    font-weight: bold;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    z-index: 2;
+    position: relative;
+}
+.slide .hd li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    background: #646464;
+    color: #fff;
+    font-size: 12px;
+    overflow: visible;
+    text-align: center;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    margin: 0 3px;
+    border-radius: 20px;
+}
+.slide .bd img {
+    width: 750px;
+    height: 340px;
+}
+.recommended-book .hd h3 {
+    font-size: 18px;
+    float: left;
+    background: url(/images/home/bugle.jpg) no-repeat left center;
+    padding-left: 20px;
+}
+.recommended-book .bd li {
+    float: left;
+    height: 265px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 25%;
+    margin: 10px 0 0 0;
+    _display: inline;
+}
+.recommended-book .bd li .pic {
+    width: 183px;
+    height: 163px;
+}
+.pic {
+    text-align: center;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+}
+.pic .subpic {
+    top: 50%;
+    left: 50%;
+}
+.recommended-book .bd li .title {
+    padding: 5px 1px 1px;
+    position: relative;
+    padding: 6px 1px 0\9;
+    width: 66%;
+    margin: 0 auto;
+    height: 32px;
+    line-height: 16px;
+}
+.recommended-book .bd li p {
+    overflow: hidden;
+}
+.recommended-book .bd li .yl-author {
+    line-height: 18px;
+    width: 66%;
+    margin: 0 auto;
+    color: #999;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+}
+.recommended-book .bd li .price {
+    padding-top: 3px;
+    width: 66%;
+    margin: 0 auto;
+}
+.recommended-book .bd li .price .price_d {
+    margin-right: 10px;
+}
+.price_d {
+    color: #DA0000;
+    font-weight: bold;
+    font-size: 15px;
+}

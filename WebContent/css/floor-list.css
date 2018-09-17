@@ -1,0 +1,109 @@
+@CHARSET "UTF-8";
+.floor_list {
+    width: 1200px;
+    margin: 0 auto;
+    clear: both;
+}
+.book-new {
+    height: 582px;
+}
+.book-storey {
+    margin-top: 20px;
+    overflow: hidden;
+    clear: both;
+    position: relative;
+}
+.book-storey .bs-hd {
+    font-size: 18px;
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 2px solid #ccc;
+}
+.s1 .bs-hd h3 {
+    padding-left: 30px;
+    background: url(/images/home/f1.jpg) no-repeat;
+}
+.book-storey .bs-hd h3 {
+    width: 150px;
+    float: left;
+    line-height: 36px;
+}
+.book-storey .bs-hd ul {
+    float: right;
+    padding-left: 40px;
+    position: relative;
+    right: 245px;
+}
+.book-storey .bs-hd ul li.on {
+    color: #cd0001;
+    font-weight: bold;
+}
+.book-storey .bs-hd ul li {
+    float: left;
+    position: relative;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.book-storey .bs-hd ul li.on a, .book-storey .bs-hd ul li.on a:hover {
+    color: #cd0001;
+}
+.book-storey .bs-hd ul li a {
+    display: block;
+    text-decoration: none;
+}
+.book-storey .bs-hd ul li.on span {
+    display: inline-block;
+}
+.book-storey .bs-hd ul li span {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 8px;
+    display: none;
+    border-bottom-color: #cd0001;
+    color: #cd0001;
+}
+.book-storey .bs-bd {
+    clear: both;
+    overflow: hidden;
+    margin-right: 250px;
+}
+.book-storey .bs-bd .book-list {
+    position: relative;
+    margin-right: 5px;
+}
+.book-storey .bs-bd .book-list ul {
+    position: relative;
+    
+}
+.book-storey .bs-bd .book-list li {
+    float: left;
+    overflow: hidden;
+    padding: 5px 0 0 0;
+    vertical-align: middle;
+    width: 20%;
+    margin: 9px 0;
+}
+.book-storey .bs-bd .book-list li .pic {
+    width: 190px;
+    height: 190px;
+}
+.book-storey .bs-bd .book-list li .name {
+    height: 35px;
+    margin: 0 auto;
+    /* padding: 0 0 1px; */
+    position: relative;
+    padding: 1px 0 0\9;
+    width: 66%;
+    line-height: 18px;
+    overflow: hidden;
+}
+.book-storey .bs-bd .book-list li .price {
+    margin: 5px auto 0 auto;
+    width: 66%;
+}

@@ -1,0 +1,5 @@
+$(function(){
+	$.ajax({
+		url:'/Shop/'
+	})
+})

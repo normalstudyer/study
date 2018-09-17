@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/Shop/layui-v2.4.1/layui/css/layui.css" media="all">
+    <script src="/Shop/layui-v2.4.1/layui/layui.js" charset="utf-8"></script>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="slideTest1" style="margin-top:50px;"></div>
+<script>
+    //layui下面的功能格式都差不多是这个样子
+    layui.use('slider', function(){
+        //var slider = layui.slider;
+        var slider1;
+        //渲染
+        slider1 = layui.slider.render({
+            elem: '#slideTest1'  //绑定元素
+        });
+    });
+</script>
+</body>
+</html>

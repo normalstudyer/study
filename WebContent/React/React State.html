@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试React State</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- 生产环境中不建议使用 -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<div id="example1"></div>
+<script type="text/babel">
+    class Clock extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {date: new Date()};
+        }
+
+        render() {
+            return (
+                    <div>
+                        <h3>Hello,world</h3>
+                        <h3>现在是{this.state.date.toLocaleTimeString()}</h3>
+                    </div>
+            );
+        }
+    }
+    ReactDOM.render(
+        <Clock/>,
+        document.getElementById('example')
+    )
+    //将生命周期方法添加到类中
+    class Clock1 extends React.Component{
+        constructor(props){
+            super(props);
+            this.state = {date:new Date()};
+        }
+
+    componentDidMount(){
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        );
+    }
+    componentWillUnmount(){
+        clearInterval(this.timerID);
+    }
+    tick(){
+        this.setState({
+            date:new Date()
+        });
+    }
+    render(){
+        return (
+            <div>
+                <h3>Hello,world</h3>
+                <h3>现在是{this.state.date.toLocaleTimeString()}</h3>
+            </div>
+        )
+    }
+    }
+    function App() {
+        return(
+            <div>
+                <Clock1/>,
+                <Clock1/>,
+                <Clock1/>
+            </div>
+        );
+    }
+    ReactDOM.render(
+        <App/>,
+        document.getElementById('example1')
+    )
+</script>
+</body>
+</html>

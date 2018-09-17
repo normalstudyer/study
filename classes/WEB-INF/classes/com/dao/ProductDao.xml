@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.ProductDao">
+<resultMap type="com.bean.Product" id="result1"></resultMap>	
+	<cache
+		eviction="FIFO"
+		flushInterval="10800000" size="512"
+		readOnly="true"
+	/>
+	<!-- 查找content.jsp里面的图书信 息 -->
+	<select id="bookdetail" parameterType="int" resultMap="result1">
+	select * from product where pId = #{pId}
+	</select>
+</mapper>

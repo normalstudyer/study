@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>test</title>
+<script type="text/javascript" src="/Shop/jQuery-1.7.1.js"></script>
+<script type="text/javascript" src="lhgdialog/lhgdialog/lhgdialog.min.js"></script>
+<script>
+$(function(){
+	/* $('.bt').click(function(){
+		alert('ok');
+    $.dialog('简单愉悦的接口，强大的表现力，优雅的内部实现', function(){alert('yes');});
+	}); */
+	$('.bt').dialog('简单愉悦的接口，强大的表现力，优雅的内部实现', function(){alert('yes');});
+})
+	/* $(function(){   
+	    $('#dg').dialog({ id:'test1', html:'lhgdialog' });   
+	});   */ 
+	function check(){
+		console.log("check()");
+	var dg = $.dialog({   
+     id: 'test1',   
+     title: '弹出窗口',
+     width:'400px',
+     height:'400px',
+     content:'url:test.jsp',
+     //html: 'test.jsp'//也可为地址:例如users/add.do  
+    }); 
+    //dg.ShowDialog(); 
+	}
+</script>
+<style type="text/css">
+*{
+    padding:0;
+    margin:0;
+    border:none;
+}
+#news{
+    width:300px;
+    height:100px;
+    margin:20px auto;
+    background-color:#CCC;
+    border:#039 solid 1px;
+    overflow:scroll;/*这里必须设置哦，否则滚动会消失的，如果设置为scroll，更容易明白原理*/
+}
+#news li{
+    line-height:30px;
+}
+</style>
+</head>
+<body>
+<h3>标题 [title]</h3>
+<button class="bt" style="width:100px;">测试</button><button id="dg" style="width:100px;" onclick="check()">点击</button>				
+<div id="news" onmouseover="tz()" onmouseout="ks()">
+<ul id="p1">
+<li><a href="">1这是测试新闻滚动效果</a></li>
+<li><a href="">2这是测试新闻滚动效果</a></li>
+<li><a href="">3这是测试新闻滚动效果</a></li>
+<li><a href="">4这是测试新闻滚动效果</a></li>
+<li><a href="">5这是测试新闻滚动效果</a></li>
+<li><a href="">6这是测试新闻滚动效果</a></li>
+<li><a href="">7这是测试新闻滚动效果</a></li>
+<li><a href="">8这是测试新闻滚动效果</a></li>
+</ul>
+<ul id="p2">
+</ul>
+</div>
+<script type="text/javascript">
+var n=document.getElementById("news");
+var p1=document.getElementById("p1");
+var p2=document.getElementById("p2");
+p2.innerHTML=p1.innerHTML;
+//alert(n.offsetHeight+" 1  "+p1.offsetHeight);
+var f=function(){
+    n.scrollTop++;
+    if(n.scrollTop>=p1.offsetHeight){
+        //alert(n.scrollTop+" 1  "+p1.offsetHeight);
+        n.scrollTop=0;
+    }
+}
+var i=setInterval(f,20);
+var tz=function(){
+    clearInterval(i);
+}
+var ks=function(){
+    i=setInterval(f,20);
+}
+</script>
+</body>
+</html>

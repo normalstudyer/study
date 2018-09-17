@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个React实例</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- 生产环境中不建议使用 -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<div id="example1"></div>
+<div id="example2"></div>
+<div id="example3"></div>
+<script type="text/babel">
+    var myStyle = {
+      fontSize:20,
+        color:'#FF0000'
+    };
+    const element = <h1 style={myStyle}>Hello ,world</h1>;
+    ReactDOM.render(
+        <h1 style={myStyle}>Hello ,world</h1>,
+        document.getElementById('example')
+    );
+    function tick(){
+        const element1 =(
+            <div>
+                <h2>hello world</h2>
+                <h3>现在是{new Date().toLocaleTimeString()}</h3>
+            </div>
+        );
+        ReactDOM.render(
+            element1,
+            document.getElementById('example1')
+        );
+    }
+    setInterval(tick,1000);
+
+    function Clock(props) {
+        return(
+            <div>
+                <h2>我是菜鸟</h2>
+                <h2>现在是{props.date.toLocaleTimeString()}</h2>
+            </div>
+        );
+    }
+    function tick1() {
+        ReactDOM.render(
+            <Clock date={new Date()}/>,
+            document.getElementById('example2')
+        );
+    }
+    setInterval(tick1,1000);
+    
+    class Clock1 extends React.Component{
+        render(){
+            return(
+                <div>
+                    <h2>哈哈哈</h2>
+                    <h2>目前是{this.props.date.toLocaleTimeString()}</h2>
+                </div>
+            );
+        }
+    }
+    function tick2() {
+        ReactDOM.render(
+            <Clock1 date={new Date()}/>,
+            document.getElementById('example3')
+        )
+    }
+</script>
+</body>
+</html>

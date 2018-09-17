@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.BuyDao">
+<resultMap type="com.bean.BuyedBooks" id="result"></resultMap>	
+	<cache
+		eviction="FIFO"
+		flushInterval="10800000" size="512"
+		readOnly="true"
+	/>
+	<!-- 向数据库中插入购买图书 -->
+	<insert id="shopping" parameterType="com.bean.BuyedBooks">
+	insert into BuyedBooks(bId,bName,bCount,bPrice) values(#{bId},#{bName},#{bCount},#{bPrice})
+	</insert>
+	<!-- 查出所有加入购物车的图书 -->
+	<select id="bookscar" resultMap="result">
+	select * from BuyedBooks
+	</select>
+</mapper>

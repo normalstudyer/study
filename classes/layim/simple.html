@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>颜色选择器</title>
+
+    <link rel="stylesheet" href="/Shop/layui-v2.4.1/layui/css/layui.css">
+
+</head>
+<body>
+<div id="test1"></div>
+<ul class="site-doc-icon site-doc-anim">
+    <li>
+<div class="layui-anim" data-anim="layui-anim-rotate" >360旋转</div>
+<div class="code">layui-anim-rotate</div>
+    </li>
+</ul>
+<script src="/Shop/layui-v2.4.1/layui/layui.js"></script>
+<script>
+    layui.use('colorpicker', function(){
+        var colorpicker = layui.colorpicker;
+        //渲染
+        colorpicker.render({
+            elem: '#test1'  //绑定元素
+        });
+    });
+</script>
+<!--<script>
+    layui.use('layim', function(layim){
+        //先来个客服模式压压精
+        layim.config({
+            brief: true //是否简约模式（如果true则不显示主面板）
+        }).chat({
+            name: '客服姐姐'
+            ,type: 'friend'
+            ,avatar: 'http://tp1.sinaimg.cn/5619439268/180/40030060651/1'
+            ,id: -2
+        });
+    });
+</script>-->
+</body>
+</html>

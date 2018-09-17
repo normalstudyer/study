@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>评分组件</title>
+    <link rel="stylesheet" href="/Shop/layui-v2.4.1/layui/css/layui.css" media="all">
+    <script src="/Shop/layui-v2.4.1/layui/layui.js" charset="utf-8"></script>
+</head>
+<body>
+<div id="test1"></div>
+<script>
+    layui.use('rate',function(){
+        var rate = layui.rate;
+        //渲染
+        var insl = rate.render({
+            elem:'#test1',//绑定元素
+            value:1,
+            text:true,
+            setText:function(value){
+                var arrs={
+                    '1':'极差',
+                    '2':'差',
+                    '3':'中等',
+                    '4':'好'
+            }
+            this.span.text(arrs[value] || (value + "量"));
+            }
+        })
+    })
+</script>
+</body>
+</html>
